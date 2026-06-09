@@ -1,0 +1,34 @@
+# ==========================================
+# Terraform - Files cần bỏ qua
+# ==========================================
+
+# Không đẩy thư mục cài đặt và các plugin của terraform
+.terraform/
+
+# Không đẩy các file lưu trạng thái hệ thống (chứa thông tin bảo mật hạ tầng)
+*.tfstate
+*.tfstate.backup
+*.tfstate.lock.info
+
+# Không đẩy các file chứa biến bí mật (chứa mật khẩu, token, private key...)
+*.tfvars
+*.tfvars.json
+secrets.tfvars
+
+# Không đẩy các file log khi xảy ra crash
+crash.log
+crash.*.log
+
+# Không đẩy các file override cấu hình tạm thời
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# ==========================================
+# Hệ điều hành & IDE (Khuyên dùng nên thêm)
+# ==========================================
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
