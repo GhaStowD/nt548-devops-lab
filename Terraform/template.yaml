@@ -165,7 +165,7 @@ Resources:
   CFKeyPair:
     Type: AWS::EC2::KeyPair
     Properties:
-      KeyName: my-aws-key-cf
+      KeyName: my-aws-key-cf-lab2
 
   # =================================================================
   # 6. KHỞI TẠO MÁY ẢO EC2
