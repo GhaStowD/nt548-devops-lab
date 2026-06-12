@@ -1,0 +1,9 @@
+project:
+  name: nt548-lab2-cfn-test
+  regions:
+    - ap-southeast-1 # Region bạn đang dùng
+tests:
+  default:
+    template: ./template.yaml
+    parameters:
+      MyIP: "0.0.0.0/0" # Cấp IP giả lập để Taskcat test
