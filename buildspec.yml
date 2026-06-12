@@ -3,17 +3,17 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-      python: 3.10
+      python: "3.10"
     commands:
-      - echo "Đang cài đặt cfn-lint và taskcat..."
+      - echo "Dang cai dat cfn-lint va taskcat..."
       - pip install cfn-lint taskcat
   pre_build:
     commands:
-      - echo "BƯỚC 1: Quét lỗi cú pháp CloudFormation bằng cfn-lint..."
+      - echo "BUOC 1 - Quet loi cu phap CloudFormation bang cfn-lint..."
       - cfn-lint template.yaml
   build:
     commands:
-      - echo "BƯỚC 2: Triển khai thử nghiệm hạ tầng thực tế bằng Taskcat..."
+      - echo "BUOC 2 - Trien khai thu nghiem ha tang thuc te bang Taskcat..."
       # Taskcat sẽ tự tạo 1 stack nháp trên AWS, nếu thành công nó sẽ tự xóa đi
       - taskcat test run
 artifacts:
