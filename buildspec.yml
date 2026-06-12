@@ -3,9 +3,10 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-      python: "3.10"
+      python: "3.11"
     commands:
       - echo "Dang cai dat cfn-lint va taskcat..."
+      - python -m pip install --upgrade pip
       - pip install cfn-lint taskcat
   pre_build:
     commands:
