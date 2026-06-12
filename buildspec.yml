@@ -7,7 +7,7 @@ phases:
     commands:
       - echo "Dang cai dat cfn-lint va taskcat..."
       - python -m pip install --upgrade pip
-      - pip install setuptools
+      - pip install "setuptools<70.0.0"
       - pip install cfn-lint taskcat
   pre_build:
     commands:
@@ -16,7 +16,7 @@ phases:
   build:
     commands:
       - echo "BUOC 2 - Trien khai thu nghiem ha tang thuc te bang Taskcat..."
-      # Taskcat sẽ tự tạo 1 stack nháp trên AWS, nếu thành công nó sẽ tự xóa đi
+       # Taskcat sẽ tự tạo 1 stack nháp trên AWS, nếu thành công nó sẽ tự xóa đi
       - taskcat test run
 artifacts:
   files:
