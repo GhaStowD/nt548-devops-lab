@@ -7,8 +7,8 @@ phases:
     commands:
       - echo "Dang cai dat cfn-lint va taskcat..."
       - python -m pip install --upgrade pip
-      - pip install setuptools cfn-lint taskcat
       - pip install cfn-lint taskcat
+      - pip install setuptools cfn-lint taskcat
   pre_build:
     commands:
       - echo "BUOC 1 - Quet loi cu phap CloudFormation bang cfn-lint..."
